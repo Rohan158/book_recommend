@@ -1,1 +1,1 @@
-web: gunicorn book_recommendation.wsgi --log-file -
+web: waitress-serve --port=$PORT book_recommendation.wsgi:application
