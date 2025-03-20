@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SSECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
+SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 

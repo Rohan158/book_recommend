@@ -7,7 +7,7 @@ from dotenv import load_dotenv  # For loading environment variables
 load_dotenv()
 
 # Configure API keys securely
-GEMINI_API_KEY='AIzaSyAtCAiERG1KhfmpqzZhRNzTMLEUHIpujxk'
+GEMINI_API_KEY='AIzaSyA6vWEv0oT51TtTmoacqOJ-iF4oKNfNxts'
 GOOGLE_BOOKS_API_KEY='AIzaSyD1hdztRVBeqFl-sATACV8jlO3gPanFdzQ'
 
 # Configure Gemini API
@@ -40,7 +40,8 @@ def ai_recommend_books(genre):
     """Get AI-based book recommendations using Gemini API."""
     try:
         # Use a correct Gemini model version
-        model = genai.GenerativeModel("gemini-1.0-pro")
+        model = genai.GenerativeModel("gemini-1.5-flash")
+
 
         # Generate AI-based book recommendations
         response = model.generate_content(f"Suggest some books in the {genre} genre.")
